@@ -220,6 +220,5 @@
     {"t":3.28331, "x":7.7, "y":0.9, "heading":-1.5708, "vx":3.26146, "vy":0.70942, "omega":3.40753, "ax":0.0, "ay":0.0, "alpha":0.0, "fx":[0.0,0.0,0.0,0.0], "fy":[0.0,0.0,0.0,0.0]}],
   "splits":[0]
  },
- "events":[
-   {"name":"Marker", "from":{"target":0, "targetTimestamp":0.0, "offset":{"exp":"0 s", "val":0.0}}, "event":{"type":"named", "data":{"name":"FirstOverBump"}}}]
+ "events":[]
 }

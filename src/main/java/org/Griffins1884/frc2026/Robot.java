@@ -152,6 +152,7 @@ public class Robot extends LoggedRobot {
     }
     if (AUTONOMOUS_ENABLED) {
       autonomousCommand = robotContainer.getAutonomousCommand();
+      robotContainer.alignSimulationToSelectedAutoStartPose();
 
       // schedule the autonomous command (example)
       if (autonomousCommand != null) {

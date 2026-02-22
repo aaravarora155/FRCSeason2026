@@ -246,6 +246,5 @@
     {"t":2.87983, "x":1.96864, "y":4.00865, "heading":0.0, "vx":0.07578, "vy":-2.40268, "omega":0.72158, "ax":0.0, "ay":0.0, "alpha":0.0, "fx":[0.0,0.0,0.0,0.0], "fy":[0.0,0.0,0.0,0.0]}],
   "splits":[0]
  },
- "events":[
-   {"name":"Marker", "from":{"target":0, "targetTimestamp":0.0, "offset":{"exp":"0 s", "val":0.0}}, "event":{"type":"named", "data":{"name":"OverBumpAndShoot"}}}]
+ "events":[]
 }

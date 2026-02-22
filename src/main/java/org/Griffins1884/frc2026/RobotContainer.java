@@ -504,6 +504,25 @@ public class RobotContainer {
     SimulatedArena.getInstance().resetFieldForAuto();
   }
 
+  /**
+   * In sim, seed both the simulated drivetrain world pose and odometry to the selected auto start
+   * pose so path-following starts in the same frame.
+   */
+  public void alignSimulationToSelectedAutoStartPose() {
+    if (MODE != RobotMode.SIM || driveSimulation == null || drive == null) {
+      return;
+    }
+    Optional<Pose2d> startPose = getSelectedAutoStartPose();
+    if (startPose.isEmpty()) {
+      Logger.recordOutput("Autonomy/SimStartPoseApplied", false);
+      return;
+    }
+    driveSimulation.setSimulationWorldPose(startPose.get());
+    drive.resetOdometry(startPose.get());
+    Logger.recordOutput("Autonomy/SimStartPoseApplied", true);
+    Logger.recordOutput("Autonomy/SimStartPose", startPose.get());
+  }
+
   /** Auto-zero gyro/odometry once when disabled and alliance is known. */
   public void tryAutoZeroOdometryToAllianceWall() {
     if (autoAllianceZeroed || drive == null) {
